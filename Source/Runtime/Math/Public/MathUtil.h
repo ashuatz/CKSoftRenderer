@@ -63,6 +63,12 @@ struct Math
 		return (A >= (T)0) ? A : -A;
 	}
 
+	template <typename T>
+	static constexpr FORCEINLINE T Sign(const T val)
+	{
+		return (T(0) < val) - (val < T(0));
+	}
+
 	template<class T>
 	static constexpr FORCEINLINE T Clamp(const T X, const T Min, const T Max)
 	{
