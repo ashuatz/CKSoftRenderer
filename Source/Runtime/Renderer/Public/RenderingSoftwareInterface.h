@@ -21,4 +21,5 @@ public:
 
 	virtual void DrawFullVerticalLine(int InX, const LinearColor& InColor) = 0;
 	virtual void DrawFullHorizontalLine(int InY, const LinearColor& InColor) = 0;
+	virtual void DrawLine(const Vector2& originVectorPos, const Vector2& destinationVectorPos, const LinearColor& InColor) = 0;
 };

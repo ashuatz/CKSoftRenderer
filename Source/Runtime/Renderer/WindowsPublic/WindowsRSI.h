@@ -27,6 +27,7 @@ public:
 	virtual void DrawFullVerticalLine(int InX, const LinearColor& InColor) override;
 	virtual void DrawFullHorizontalLine(int InY, const LinearColor& InColor) override;
 
+	virtual void DrawLine(const Vector2& originVectorPos, const Vector2& destinationVectorPos, const LinearColor& InColor) override;
 private:
 	void SetPixel(const ScreenPoint& InPos, const LinearColor& InColor);
 

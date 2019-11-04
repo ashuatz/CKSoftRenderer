@@ -80,6 +80,48 @@ void WindowsRSI::DrawFullHorizontalLine(int InY, const LinearColor & InColor)
 	}
 }
 
+void WindowsRSI::DrawLine(const Vector2 & start, const Vector2 & end, const LinearColor& InColor)
+{
+	int dx = abs(end.X - start.X);
+	int dy = abs(end.Y - start.Y);
+
+	const int signx = Math::Sign(end.X - start.X);
+	const int signy = Math::Sign(end.Y - start.Y);
+
+	const bool isChanged = dy > dx;
+
+	if (isChanged)
+	{
+		auto temp = dx;
+		dx = dy;
+		dy = temp;
+	}
+
+	Vector2 current = start;
+
+	int e = 2 * dy - dx;
+	for (int i = 0; i <= dx; ++i)
+	{
+		DrawPoint(current, InColor);
+		if (e >= 0)
+		{
+			if (isChanged)
+				current.X += signx;
+			else
+				current.Y += signy;
+
+			e -= 2 * dx;
+		}
+
+		if (isChanged)
+			current.Y += signy;
+		else
+			current.X += signx;
+
+		e += 2 * dy;
+	}
+}
+
 void WindowsRSI::SetPixel(const ScreenPoint& InPos, const LinearColor& InColor)
 {
 	if (BlendingMode == BlendingModes::Opaque)
