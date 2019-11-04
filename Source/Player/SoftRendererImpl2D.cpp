@@ -59,6 +59,23 @@ void SoftRendererImpl2D::RenderFrameImpl()
 	RSI->DrawPoint(Vector2::Zero - Vector2::UnitX, LinearColor::Blue);
 	RSI->DrawPoint(Vector2::Zero + Vector2::UnitY, LinearColor::Blue);
 	RSI->DrawPoint(Vector2::Zero - Vector2::UnitY, LinearColor::Blue);
+
+
+	//1사분면
+	RSI->DrawLine(Vector2(10, 10), Vector2(50,120), LinearColor::Blue + LinearColor::Red);
+	RSI->DrawLine(Vector2(10, 10), Vector2(120,50), LinearColor::Blue + LinearColor::Red);
+
+	//2사분면
+	RSI->DrawLine(Vector2(-10, 10), Vector2(-50,120), LinearColor::Blue + LinearColor::Red);
+	RSI->DrawLine(Vector2(-10, 10), Vector2(-120,50), LinearColor::Blue + LinearColor::Red);
+
+	//3사분면
+	RSI->DrawLine(Vector2(-10, -10), Vector2(-50,-120), LinearColor::Blue + LinearColor::Red);
+	RSI->DrawLine(Vector2(-10, -10), Vector2(-120,-50), LinearColor::Blue + LinearColor::Red);
+
+	//4사분면
+	RSI->DrawLine(Vector2(10, -10), Vector2(50,-120), LinearColor::Blue + LinearColor::Red);
+	RSI->DrawLine(Vector2(10, -10), Vector2(120,-50), LinearColor::Blue + LinearColor::Red);
 }
 
 void SoftRendererImpl2D::UpdateImpl(float DeltaSeconds)
