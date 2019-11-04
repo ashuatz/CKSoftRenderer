@@ -61,19 +61,19 @@ void SoftRendererImpl2D::RenderFrameImpl()
 	RSI->DrawPoint(Vector2::Zero - Vector2::UnitY, LinearColor::Blue);
 
 
-	//1»çºÐ¸é
+	//1ì‚¬ë¶„ë©´
 	RSI->DrawLine(Vector2(10, 10), Vector2(50,120), LinearColor::Blue + LinearColor::Red);
 	RSI->DrawLine(Vector2(10, 10), Vector2(120,50), LinearColor::Blue + LinearColor::Red);
 
-	//2»çºÐ¸é
+	//2ì‚¬ë¶„ë©´
 	RSI->DrawLine(Vector2(-10, 10), Vector2(-50,120), LinearColor::Blue + LinearColor::Red);
 	RSI->DrawLine(Vector2(-10, 10), Vector2(-120,50), LinearColor::Blue + LinearColor::Red);
 
-	//3»çºÐ¸é
+	//3ì‚¬ë¶„ë©´
 	RSI->DrawLine(Vector2(-10, -10), Vector2(-50,-120), LinearColor::Blue + LinearColor::Red);
 	RSI->DrawLine(Vector2(-10, -10), Vector2(-120,-50), LinearColor::Blue + LinearColor::Red);
 
-	//4»çºÐ¸é
+	//4ì‚¬ë¶„ë©´
 	RSI->DrawLine(Vector2(10, -10), Vector2(50,-120), LinearColor::Blue + LinearColor::Red);
 	RSI->DrawLine(Vector2(10, -10), Vector2(120,-50), LinearColor::Blue + LinearColor::Red);
 }
